@@ -67,8 +67,17 @@ namespace Forces
                 Force = 0.0;
             
             }
+            try
+            {
+              Angle = double.Parse(textBox2.Text);
+            }
+            catch
+            {
+                MessageBox.Show("Type a number in the Angle box!");
+                Angle = 0.0;
 
-            double Angle = double.Parse(textBox2.Text);
+            }
+            
 
             //Calculate Fx and Fy
             double Fy = Force * cos(Angle);
